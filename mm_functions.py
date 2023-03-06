@@ -86,7 +86,7 @@ def compare_colours(solution_colours, new_try_colours, abs_matches):
     """ 
     This functions compares combinations by colours only, it finds the 
     number of all colours matches and substruct the number of absolut 
-    matches (where colours mathes at the same position), so only mathes 
+    matches (where colours matches at the same position), so only matches
     of colours on different positions remains.
     
     Arguments:
@@ -194,6 +194,18 @@ def victory_check(reply):
 
 
 
-def q():
-    pass
+def loss_check(number_of_attempt):
 
+    """
+    Checks if player exceeded the number of attempts
+    
+    Arguments:
+        number_of_attempt : int
+    Returns:
+        check_result : bool
+    """
+    if number_of_attempt > 10:
+        check_result = True
+    else:
+        check_result = False
+    return check_result
